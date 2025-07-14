@@ -3,7 +3,7 @@ session_start();
 $conn = new mysqli("localhost", "root", "", "mindcare_full");
 
 if (isset($_SESSION['user'])) {
-  header("Location: ../index.html");
+  header("Location: ../index.php");
   exit;
 }
 
@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
   if ($result->num_rows > 0) {
     $_SESSION['user'] = $email;
-    header("Location: ../index.html");
+    header("Location: ../index.php");
     exit;
   } else {
     $error = "Invalid email or password.";

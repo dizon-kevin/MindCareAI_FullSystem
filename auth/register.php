@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "mindcare");
+$conn = new mysqli("localhost", "root", "", "mindcare_full");
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $email = $_POST['email'];
